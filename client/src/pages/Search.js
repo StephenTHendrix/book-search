@@ -79,7 +79,7 @@ class Search extends Component {
                 // disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Search Book
               </FormBtn>
             </form>
           
