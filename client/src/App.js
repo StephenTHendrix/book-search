@@ -1,30 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
+import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import Books from "./pages/Books";
-// import Detail from "./pages/Detail";
-// import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
 import Jumbotron from "./components/Jumbotron";
+import Nav from "./components/Nav";
 import Search from "./pages/Search";
+import Saved from "./pages/Saved";
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Nav />
-        <Jumbotron>
-              <h1>What Books Should I Read?</h1>
-            </Jumbotron>
-            <Search />
-        {/* <Switch>
-          <Route exact path="/" component={Books} />
-          <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
-          <Route component={NoMatch} />
-        </Switch> */}
-      </div>
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Nav/>
+        <Jumbotron> <h1>(React) Google Books Search</h1> </Jumbotron>
+        <Search/>
+        <Saved/>
+      </Router>
+    );
+  }
 }
 
 export default App;
