@@ -10,10 +10,16 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <div>
         <Nav/>
         <Jumbotron> <h1>(React) Google Books Search</h1> </Jumbotron>
-        <Search/>
-        <Saved/>
+        <Switch>
+          <Route exact path="/" component={Search} />
+          <Route exact path="/books" component={Saved} />
+          {/* <Route exact path="/books/:id" component={Detail} /> */}
+          {/* <Route component={NoMatch} /> */}
+        </Switch>
+        </div>
       </Router>
     );
   }

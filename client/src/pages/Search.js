@@ -52,6 +52,20 @@ class Search extends Component {
             })
     }
 
+    handleSaveBook = data => {
+        // event.preventDefault();
+         console.log(data);
+          API.saveBook({
+            title: data.title,
+            authors: data.authors,
+            description: data.description,
+            image: data.image,
+            link: data.link
+          })
+            // .then(res => this.loadBooks())
+            .catch(err => console.log(err));
+        
+      };
 
 
     render() {
@@ -81,7 +95,7 @@ class Search extends Component {
                         <div>
 
                             <ListItem key={book._id}>
-                                <FormBtn>
+                                <FormBtn onClick={() => this.handleSaveBook(book)}>
                                     Save
                                 </FormBtn>
                                 <FormBtn>
