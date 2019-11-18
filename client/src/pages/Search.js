@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../utils/api";
+import api from "../utils/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
@@ -11,7 +11,7 @@ class Search extends Component {
     state = {
         books: []
     }
-    
+
 
     handleInputChange = event => {
         const { name, value } = event.target;
