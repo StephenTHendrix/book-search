@@ -10,9 +10,6 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 class Saved extends Component {
   state = {
     books: [],
-    title: "",
-    authors: "",
-    description: ""
   };
 
   componentDidMount() {
@@ -24,9 +21,6 @@ class Saved extends Component {
       .then(res =>
         this.setState({
           books: res.data,
-          title: "",
-          author: "",
-          description: ""
         })
       )
       .catch(err => console.log(err));

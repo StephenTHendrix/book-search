@@ -12,22 +12,12 @@ class Search extends Component {
         books: []
     }
 
-
-
-
-    componentDidMount() {
-    }
-
-
-
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
             [name]: value
         });
     };
-
-
 
     handleFormSubmit = event => {
         event.preventDefault();
