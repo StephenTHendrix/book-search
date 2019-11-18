@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import api from "../utils/api";
+import API from "../utils/API";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
